@@ -51,7 +51,7 @@ function displayTemperature(response) {
 
 function search(city) {
   let apiKey = "526c5482745c7f74e3d6117a5b1a2c31";
-  let apiUrl = `https//api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
 function handleSubmit(event) {
@@ -80,12 +80,12 @@ function displayCelsiusTemperature(event) {
 let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
-form, addEventListener("submit", handleSubmit);
+form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsiusLink");
+let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink, addEventListener("click", displayCelsiusTemperature);
 
 search("Porto-Novo");
